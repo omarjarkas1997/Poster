@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="assets/conncomm_logo_2.ico">
+
+	<title>Project Name</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Muli|Nunito|Poiret+One" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/thesisdemos.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- nav section -->
+	<nav class="navbar sticky-top navbar-light bg-light">
+		<a href="../index.html"><img src="assets/icon_website.png" width="30" height="30"
+				class="d-inline-block align-top" alt="" loading="lazy"></a><span class="navbar-brand mb-0 h1">2020
+			Semester 2 Demos</span>
+	</nav>
+
+	<!-- main poster section -->
+	<main role="main" class="container">
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="mt-4">Formal Verification of Smart Contracts</h1>
+				<h5 id="studentname">Omar Jarkas</h5>
+			</div>
+		</div>
+		<!-- Background -->
+		<div class="row mt-5">
+			<div class="col-lg-6 col-sm-12">
+				<h3>Background</h3>
+				<p>The introduction of Smart Contracts is paving the way for a new paradigm of financial arrangements
+					and interactions. With the security, immutability, and decentralization characteristics of the
+					Ethereum platform, Smart Contracts are changing the way deals are made. However, those same
+					characteristics bode some serious restrictions when developing such contracts. Due to the immutable
+					coupling of contract code with financial values, code written should always be of ultimate
+					efficiency, security, and correctness. Formal Verification has emerged as the prominent method for
+					testing the correctness of contracts before deploying them to the chain. However, finding the right
+					mix between the formal methods, design patterns, and testing tradeoffs are often challenging and
+					require extra implementation. This paper introduces a parser that attempts to bridge the gap between
+					a general formal verification language that is gaining plenty of traction in the past years, Dafny,
+					with the most prominent programming language used to develop Smart Contracts. By using a
+					specification model for accurately modeling Smart Contract in Dafny, the parser has only to inject
+					such model and Dafny standard idioms and best practice. </p>
+				<img src="https://businessblockchainhq.com/wp-content/uploads/2019/01/The_Future_Of_Smart_Contracts.jpg?ad1fd1&ad1fd1"
+					class="img-fluid mb-2" alt="describe any images in the alt text">
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3>Framework and Parser</h3>
+				<p>
+					In this project, we introduce a formal template and parser to implement a formal verification model
+					using the Dafny Language. The Template is built on the work of a <a
+						href="https://github.com/chthonic7/solidity-to-dafny">Bithub Repository</a> to try to
+					implement a specification model in Dafny for Ethereum Smart Contracts. The Specification model is in
+					the context of the global namespace of the Solidity language that enables it to interact with other
+					contracts, users, and the blockchain environment. The specification model supplies the formal
+					verification language with the adequate functions to mimic the Ethereum Virtual Machine Environment
+					by providing the global function and variables used in Solidity.
+				</p>
+
+				<img src="assets/pic2.png" class="img-fluid m-4" alt="describe any images in the alt text">
+
+				<p>The implementation of the specification model allows the efficient reasoning and formalization of the
+					contract's code. However, the Dafny language uses a series of recommended best practices and
+					standard idioms for effective verification. The Parser attempts to the facilitate a more smooth
+					implementation of such practices. The parser essential extracts the important information from Smart
+					Contracts such as its name, variables, and functions and attempts to build a skeleton from the
+					information while implementing the specification model and the practices mentioned. </p>
+
+			</div>
+		</div>
+
+		<!-- Smart Contracts -->
+		<hr>
+		<div class="row mt-5 mb-5">
+			<div class="col-lg-6 col-sm-12">
+				<h3>Smart Contracts</h3>
+				<p>In 2014, the Ethereum platform along with its virtual machine emerged. Ethereum came to solve many
+					problems faced in Bitcoin that made it limited in potential and support Smart Contracts. Smart
+					Contracts are nothing but computer programs deployed on the blockchain and executed by the virtual
+					machine. Such applications can facilitate the smooth collaboration between separate organizations
+					and independent parties. They are called contracts due to the blockchain’s ability to guarantee
+					enforceability of specific predefined condition and agreement mimicking real-world contracts.
+				</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<img src="assets/pic1.png" class="img-fluid mb-2" alt="describe any images in the alt text">
+			</div>
+		</div>
+		<hr>
+		<!-- Formal Verification -->
+		<div class="row mt-5">
+			<div class="col-lg-6 col-sm-12">
+				<h3>Formal Verification</h3>
+				<p>Smart Contracts give a good example of applications where failure is unacceptable. Similar to
+					the <a href="https://en.wikipedia.org/wiki/Ariane_5">Ariane 5 Rocket</a> Rocket, simple software
+					bugs can cause significant damage and loss. While formal
+					methods are not new, such software incidents are pushing more and more industries to consider formal
+					verification as a means to eliminate whole classes of unpredicted errors and capture all possible
+					behavior through specifying them. In contrast to dynamic verification, formal verification is the
+					process of using static analysis based on a mathematical proof transformation to prove the
+					correctness of hardware and software processes. The process includes defining clear formal
+					specification semantics in the form of a brief mathematical description of the algorithm to satisfy
+					clear behavior properties. Such descriptions must outline clear and concise code behavior based upon
+					mathematical models and theorems \cite{Blue}. Often the specification of high-level code can be
+					translated into other high-level languages that support specification semantics-based and deductive
+					and inductive reasoning. However, such specification can be extremely hard to model accurately and
+					deduce due to the generality of the system, hence, finding an adequate design formalization
+					technique can also be difficult. Also, while formal verification's end goal is to prove the
+					correctness of algorithms and systems by implementing code specification, there are many approaches
+					introduced in the field to tackle the challenge of correctness. However, one of the reason why
+					formal verification is very suitable to verify Smart Contract application is due to its independence
+					of simulation environments and to prove correctness.</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<img src="https://mk0spaceflightnoa02a.kinstacdn.com/wp-content/uploads/2020/01/82621576_2863422703696059_493905214517018624_o.jpg"
+					class="img-fluid mb-2" alt="describe any images in the alt text">
+				<img src="assets/pic3.png" class="img-fluid mb-2" alt="describe any images in the alt text">
+			</div>
+			<img src="assets/pic5.png" class="img-auto mb-2 my-auto" alt="describe any images in the alt text">
+		</div>
+		<!-- Demo -->
+		<hr>
+		<h1>Demonstration</h1>
+		<div class="row mt-5 mb-5">
+			<div class="col-lg-6 col-sm-12">
+				<div class="embed-responsive embed-responsive-16by9">
+					<!-- insert the embed code from youtube below here -->
+					<iframe width="1228" height="665" src="https://www.youtube.com/embed/bpjkudTz33M" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p>The YouTube video demonstrate the use and implementation of the global name-space template and the
+					Java parser. The video start by outlining the aim and method used. After that, it represents the
+					template used and contract verified by it. The video depict the vulnerability highlighting and the
+					use of the template is Dafny converted contracts as well as the vulnerabilities detected and the
+					process of verification while show Dafny recommended design patterns and best practice.
+					To implement the template as well as Dafny's best practice a simple parser was constructed in Java
+					taken is Smart Contracts and output a Dafny file that include the all the method and variables of
+					the contract along with the Dafny design patterns.
+
+				</p>
+			</div>
+		</div>
+		<hr>
+		<!-- Related Work -->
+		<!-- <hr>https://dl.acm.org/doi/epdf/10.1145/2993600.2993611 -->
+		<h1>Related Work</h1>
+		<div class="row mt-5 mb-5">
+			<div class="col-lg-6 col-sm-12">
+				<ul>
+					<li class="px-4"><a href="https://github.com/ConsenSys/eth2.0-dafny">Pegasus Team is Consensys using
+							Dafny to formal verification Ethereum 2.0 Specs</a></li>
+					<li class="px-4"><a href="https://github.com/ConsenSys/deposit-sc-dafny">Using Dafny To Formally
+							verfy Proof of Stake Consensus algorithm</a></li>
+					<li class="px-4"><a href="https://dl.acm.org/doi/epdf/10.1145/2993600.2993611">Using F* to Formal
+							Verify Smart Contracts</a></li>
+					<li class="px-4"><a
+							href="https://ts.data61.csiro.au/publications/csiro_full_text/Amani_BBS_18.pdf">Using
+							Isabelle/HOL to Formal Verify Smart Contracts on the Bytecode</a></li>
+					<li class="px-4"><a href="https://ieeexplore.ieee.org/document/8327565">Surveying Smart Contract
+							Security Patterns and Vulnerabilities</a></li>
+					<li class="px-4"><a
+							href="https://www.sciencedirect.com/science/article/pii/S0167404818310927">Survey of Formal
+							Verification tools and techniques used on Smart Contracts</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="embed-responsive embed-responsive-16by9">
+					<!-- insert the embed code from youtube below here -->
+					<iframe width="1182" height="665" src="https://www.youtube.com/embed/UCSwkUQO_no" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 
+6 Singh, A., Parizi, R., Zhang, Q., Choo, K.-K. R., and Dehghantanha, A.,
+“Blockchain smart contracts formalization: Approaches and challenges to
+address vulnerabilities,” Computers Security, vol. 88, p. 101654, 10 2019.
+7 Bhargavan, K., Delignat-Lavaud, A., Fournet, C., Gollamudi, A.,
+Gonthier, G., Kobeissi, N., Kulatova, N., Rastogi, A., Sibut-Pinote, T.,
+Swamy, N., and Zanella-Beguelin, S., “Formal verification of smart ´
+contracts: Short paper,” in Proceedings of the 2016 ACM Workshop
+on Programming Languages and Analysis for Security, ser. PLAS ’16.
+New York, NY, USA: Association for Computing Machinery, 2016, p.
+91–96. [Online]. Available: https://doi.org/10.1145/2993600.2993611
+8 Leino, K. R. M., “Dafny: An automatic program verifier for functional
+correctness,” Microsoft Research.
+9 Leino, R., “Getting started with dafny: A guide,” Microsoft Research,
+2020.
+10 Dannen, C., Introducing Ethereum and Solidity: Foundations of Cryptocurrency and Blockchain Programming for Beginners, ser. APress.
+11 Chthonic7, “Solidity-to-dafny,” 2018.
+12 2016-2018. [Online]. Available: https://solidity.readthedocs.io/en/v0.5.0/
+050-breaking-changes.html -->
+		<div class="row mt-5">
+			<div class="col-lg-8 col-sm-12">
+				<h3>Refferences</h3>
+				<ul>
+					<li>[1] 		Nakamoto, S., “Bitcoin: A peer-to-peer electronic cash system.” [Online].
+						Available: www.bitcoin.org</li>
+					<li>[2] 		Zdun, M. W. and Uwe, “Smart contracts: Security patterns in the ethereum
+						ecosystem and solidity,” 2018 International Workshop on Blockchain
+						Oriented Software Engineering (IWBOSE).</li>
+					<li>[3] 		Massimo Bartoletti, L. P., “An empirical analysis of smart contracts:
+						Platforms, applications, and design patterns,” International Conference
+						on Financial Cryptography and Data Security, vol. 10323.</li>
+					<li>[4] 		Guido Governatori, F. I., “Evaluation of logic-based smart contracts for
+						blockchain systems,” International Symposium on Rules and Rule Markup
+						Languages for the Semantic Web, vol. 9718, pp. 167–183.</li>
+					<li>[5] 		Tianyu Sun, W. Y., “A formal verification framework for security issues
+						of blockchain smart contracts,” vol. 255.</li>
+					<li>[6] Singh, A., Parizi, R., Zhang, Q., Choo, K.-K. R., and Dehghantanha, A.,
+						“Blockchain smart contracts formalization: Approaches and challenges to
+						address vulnerabilities,” Computers Security, vol. 88, p. 101654, 10 2019.</li>
+					<li>[7] 		Bhargavan, K., Delignat-Lavaud, A., Fournet, C., Gollamudi, A.,
+						Gonthier, G., Kobeissi, N., Kulatova, N., Rastogi, A., Sibut-Pinote, T.,
+						Swamy, N., and Zanella-Beguelin, S., “Formal verification of smart ´
+						contracts: Short paper,” in Proceedings of the 2016 ACM Workshop
+						on Programming Languages and Analysis for Security, ser. PLAS ’16.
+						New York, NY, USA: Association for Computing Machinery, 2016, p.
+						91–96. [Online]. Available: https://doi.org/10.1145/2993600.2993611</li>
+					<li>[11] 		Chthonic7, “Solidity-to-dafny,” 2018.</li>
+					<li>[12] 		2016-2018. [Online]. Available: https://solidity.readthedocs.io/en/v0.5.0/
+						050-breaking-changes.html --></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+			</div>
+		</div>
+	</main><!-- /.container -->
+
+	<!--/ biography modal -->
+	<div class="modal fade" id="biographymodal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="card">
+						<img src="assets/card_image.jpg" class="card-img-top" alt="Photo of the student">
+						<h5 class="card-title mt-3">Your name here</h5>
+						<p class="card-text">Add a short paragraph here about you</p>
+					</div>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<!-- Additional javascript -->
+	<script src="js/poster.js" type="text/javascript"></script>
+</body>
+
+</html>
